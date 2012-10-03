@@ -1,6 +1,6 @@
-		body {
+			body {
 			width:320px;
-			background:#eee;
+			background:#ddd;
 			margin:0;
 			padding:0;
 			font-family: Helvetica, Arial, sans-serif;
@@ -60,6 +60,7 @@
 			height:50px;
 			margin:10px;
 			border:3px solid #4889a3;
+			background:#aaa;
 		}
 		.box1 {
 			background:#1E3F6E;

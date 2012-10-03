@@ -9,6 +9,7 @@
 		<meta name="viewport" content="width=device-width, user-scalable=no">
 		
 		<link href="style.css" rel="stylesheet" type="text/css">
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
 	</head>
 
 	<body>
@@ -23,19 +24,35 @@
 
 			<div class="area">
 				<div class="box box1"><div class="latitude"></div></div>
-				<div class="box box2"><div class="longitude"></div></div>
+				<div class="box box2"><div class="longitude">Blah</div></div>
 			</div>
 
 		</div>
 
 		<!-- Let's put in a timer here -->
 		<script type="text/javascript">
-
+			var count = 30;
+			var counter = setInterval(timer, 1000); 
+			
+			function timer() {
+				count = count - 1;
+				document.getElementById("timer").innerHTML = count + " secs";
+				if (count <= 0) {
+					clearInterval(counter);
+					alert("Boom!");
+					document.getElementById('button').style.visibility = 'hidden';
+				}
+			}
 		</script>
 		
 		<!-- Let's put in the geolocation stuff here -->
 		<script type="text/javascript">
-		
+			<!-- window onload -->
+			$(function () {
+			  $("#button").click(function () {
+
+								 });
+			  });
 		</script>
 	</body>
 </html>
