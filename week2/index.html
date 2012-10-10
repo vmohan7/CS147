@@ -48,11 +48,25 @@
 		<!-- Let's put in the geolocation stuff here -->
 		<script type="text/javascript">
 			<!-- window onload -->
+			
 			$(function () {
 			  $("#button").click(function () {
-
+								 getLocation();
 								 });
 			  });
+			
+			function getLocation() {
+				if (navigator.geolocation) {
+					navigator.geolocation.getCurrentPosition(showPosition);
+				} else {
+					alert("Geolocation is not supported by this browser.");
+				}
+			}
+			
+			function showPosition(position) {
+				alert(position.coords.latitude);
+				alert(position.coords.longitude);
+			}
 		</script>
 	</body>
 </html>
